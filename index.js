@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
@@ -8,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Setup MongoDB connection
-const mongoURI = 'mongodb://127.0.0.1:27017/user_management_db';
+const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI)
     .then(() => console.log('Successfully connected to MongoDB.'))
     .catch(err => console.error('MongoDB connection error:', err));
