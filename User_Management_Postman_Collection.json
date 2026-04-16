@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "b1a1375d-5fb9-4be6-a197-2a6d47cf332f",
+		"name": "User Management Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"Adi Saputra\",\n    \"email\": \"adi@ibik.ac.id\",\n    \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "INSERT_ID_HERE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"Adi Saputra Updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "INSERT_ID_HERE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "INSERT_ID_HERE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
